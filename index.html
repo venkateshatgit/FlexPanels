@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flex Panel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="panels">
+        <div class="panel panel1 ">
+            <p>Hey</p>
+            <p>Let's</p>
+            <p>Go</p>
+        </div>
+        <div class="panel panel2 ">
+            <p>Give</p>
+            <p>Take</p>
+            <p>Recieve</p>
+        </div>
+        <div class="panel panel3 ">
+            <p>Clam</p>
+            <p>Your</p>
+            <p>Mind</p>
+        </div>
+        <div class="panel panel4 ">
+            <p>Express</p>
+            <p>Your</p>
+            <p>Gratitude</p>
+        </div>
+        <div class="panel panel5 ">
+            <p>Don't</p>
+            <p>Lose</p>
+            <p>Hope</p>
+        </div>
+    </div>
+
+    <script>
+        var last;
+        function addClass(){
+            //panel.forEach(element => element.addEventListener('transitionend', removeClass));
+            removeClass(this);
+            this.classList.toggle("active-class");
+            last=this;
+        }
+
+        function removeClass(e){
+            /*
+            console.log(e.propertyName);
+            if(e.propertyName.includes('flex')){
+                this.classList.remove("active-class");
+            }*/
+
+            console.log(e);
+
+            if(last!=e && last!=null)
+                last.classList.remove("active-class");
+
+        }
+        var panel=document.querySelectorAll(".panel");
+        console.log(panel);
+
+        
+        panel.forEach(element => element.addEventListener('click', addClass));
+        
+    </script>
+</body>
+</html>

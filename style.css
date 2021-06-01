@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    color:#fff;
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+.panels{
+    display: flex;
+}
+
+.panel{
+    flex: 1;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    transition:
+        font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex-grow 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        background 0.7s;
+
+}
+
+
+
+.panel > *{
+    width: 100%;
+    transition: transform 0.7s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel > *:first-child{
+    transform: translateY(-100%);
+}
+
+.panel > *:last-child{
+    transform: translateY(100%);
+}
+
+
+.panel p{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.panel p:nth-child(2){
+    font-size: 3rem;
+    transition:
+        font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+}
+
+.active-class{
+    flex: 4;
+}
+
+.active-class :first-child{
+    transform: translateY(100%);
+}
+
+.active-class :last-child{
+    transform: translateY(-100%);
+}
+
+.active-class p:nth-child(2){
+    font-size: 4.5rem;
+}
+
+
+.panel1{
+    background-image: url("img1.jpg");
+    
+}
+
+.panel2{
+    background-image: url("img2.jpg");
+}
+
+.panel3{
+    background-image: url("img4.jpg");
+}
+
+.panel4{
+    background-image: url("img5.jpg");
+}
+
+.panel5{
+    background-image: url("img6.jpg");
+}
